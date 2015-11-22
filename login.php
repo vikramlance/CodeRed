@@ -66,7 +66,7 @@ else
 		<center>
 		<h1> LOGIN PANEL </h1>
 		<?php
-		/*
+		
 		if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['submit']))
 		{
 			$username=mysqli_real_escape_string($con, $_POST['username']);
