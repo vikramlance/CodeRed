@@ -66,7 +66,19 @@
 								<li><a href="createorder.php"><i class="fa fa-user"></i> Create</a></li>
 								<li><a href="discover.php"><i class="fa fa-star"></i> Discover</a></li>
 								<li><a href="checkout.php"><i class="fa fa-crosshairs"></i> How it works</a></li>
-								<li><a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a></li>
+								<li>
+									<?php
+									if(!isset($_SESSION['username']))
+									{
+										echo '<a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a>';
+									}
+									else
+									{
+										echo '<a href="logout.php"><i class="fa fa-lock"></i> Logout</a>';
+									}
+										?>
+
+								</li>
 							</ul>
 						</div>
 					</div>
