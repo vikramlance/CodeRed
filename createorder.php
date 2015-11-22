@@ -94,8 +94,9 @@ if(isset($_POST['search_query']) && !empty($_POST['search_query']))
 								<div class="col-sm-3">
 								<div class="search_box pull-right">
 																	<input type="text" name="search_query" id="search_query" class="search_box" <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
+																	</div>
 									<input type="submit" name="Submit" value="Submit" />
-									</div>
+									
 									<br/>
 									</div>
 								</form>
