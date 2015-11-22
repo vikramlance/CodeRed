@@ -146,8 +146,8 @@ function showError(error) {
 			
 			
 
-											echo '<h2>'.$row['productCode'].'</h2>';
-											echo '<p>'.$row['productName'].'</p>';
+											echo '<p>'.$row['productCode'].'</p>';
+											echo '<h2>'.$row['productName'].'</h2>';
 											echo '<p>'.$row['priceEach'].'</p>';
 											}?>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
