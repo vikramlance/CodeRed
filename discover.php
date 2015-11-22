@@ -112,9 +112,9 @@ function showError(error) {
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul align="left" class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook">Location of Tasks Shown</i></a></li>
+								<li><a href="#"><i class="fa fa-user">Location of Tasks Shown</i></a></li>
 							</ul>		
-					<div align="right "id="mapholder"></div>
+					<div align="center "id="mapholder"></div>
 					
 				</div>
 			</div>
