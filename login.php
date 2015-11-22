@@ -139,12 +139,23 @@ if(isset($_POST['username'])&&isset($_POST['password']))
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
-								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.php" class="active"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="createorder.php"><i class="fa fa-user"></i> Create</a></li>
+								<li><a href="discover.php"><i class="fa fa-star"></i> Discover</a></li>
+								<li><a href="checkout.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								
+									<?php
+									if(!isset($_SESSION['username']))
+									{
+										echo '<li><a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a></li>';
+									}
+									else
+									{
+										echo '<li><a href="myorders.php"><i class="fa fa-crosshairs"></i> My Orders</a></li>';
+										echo '<li><a href="logout.php"><i class="fa fa-lock"></i> Logout</a></li>';
+									}
+										?>
 							</ul>
+
 						</div>
 					</div>
 				</div>
