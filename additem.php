@@ -23,7 +23,7 @@ if($_GET)
 	{
 		$query1="SELECT max(orderNumber) FROM Orders";
 		$res1=mysqli_query($con,$query);
-		$row=mysqli_fetch_array($res1)
+		$row=mysqli_fetch_array($res1);
 		$ordernum=$row[0];
 	}
 	echo $pcode.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty.'<br/>'.$ordernum;
