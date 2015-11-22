@@ -5,7 +5,7 @@ require('connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include('header.php'); ?>
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
