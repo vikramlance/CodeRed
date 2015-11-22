@@ -169,11 +169,9 @@ else
 										<option>Canada</option>
 										<option>Dubai</option>
 									</select>
-									<input type="password" placeholder="Confirm password">
-									<input type="text" placeholder="Phone *">
+									<input type="text" placeholder="Phone">
 									<input type="text" placeholder="Mobile Phone">
-									<input type="text" placeholder="Fax">
-							</div>
+									</div>
 						</div>
 					</div>
 					<div class="col-sm-4">
