@@ -322,7 +322,6 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Aditya Purandare</p>
 							</div>
 						</div>
 						
@@ -336,7 +335,6 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Arpit Saxena</p>
 							</div>
 						</div>
 						
@@ -350,7 +348,6 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Swapnil Phulse</p>
 							</div>
 						</div>
 						
@@ -364,7 +361,6 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Vikramsinh Jadhav</p>
 							</div>
 						</div>
 					</div>
@@ -452,10 +448,12 @@ else
 		
 	</footer><!--/Footer-->
 	
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 </body>
 </html>
