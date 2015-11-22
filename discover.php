@@ -130,9 +130,20 @@ function showError(error) {
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<?php
+						$userid=$_SESSION['userid'];
+			$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
+			//echo $squery;
+			$sresult=mysqli_query($con, $squery);
+
+		while ($row = mysqli_fetch_array($sresult))
+			{
+			echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
+			}
+?>
+											<h2>$row['productCode']</h2>
+											<p>$row['productName']</p>
+											<p>$row['priceEach']</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
 										</div>
 								</div>
