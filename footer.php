@@ -4,7 +4,7 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>Buy</span>-MyGroc</h2>
+							<h2><span>Buy</span>-MeGroc</h2>
 							<p>Established in 2015 for CodeRED Hackathon</p>
 						</div>
 					</div>
