@@ -10,7 +10,7 @@ if($_GET)
 	$price=mysqli_real_escape_string($con,$_GET['price']);
 	$qty=mysqli_real_escape_string($con,$_GET['quantity']);
 	$creatorid=$_SESSION['userid'];
-	
+
 	$query="SELECT orderNumber FROM Orders WHERE status='cart' AND order_creator_id='$creatorid'";
 	//echo $query;die();
 	$res=mysqli_query($con,$query);
@@ -28,13 +28,12 @@ if($_GET)
 	}
 	echo $pcode.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty.'<br/>'.$ordernum;
 	die();
-	
+
 	if(isset($pcode)&&isset($name)&&isset($price)&&isset($qty))
 	{
 
-			$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode', '$ordernum','$qty','$creatorid', '$price', '$name')";
-			
-		}
+		$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode', '$ordernum','$qty','$creatorid', '$price', '$name')";
+
 		echo $q;die();
 		mysqli_query($con, $q);
 		echo "Item added successfully";
