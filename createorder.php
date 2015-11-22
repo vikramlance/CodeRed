@@ -91,7 +91,7 @@ if(isset($_POST['search_query']) && !empty($_POST['search_query']))
 ?>
 <p>
 								<form action="createorder.php" method="POST">
-									<input type="text" name="search_query" id="search_query"  <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
+									<input type="text" name="search_query" id="search_query" class="search_box" <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
 									<input type="submit" name="Submit" value="Submit" />
 									<br/>
 								</form>
