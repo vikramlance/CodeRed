@@ -109,14 +109,7 @@ function showError(error) {
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-						<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Location of the Tasks Shown</a></li>
-						</ul>
-							<div align="left "id="mapholder"></div>
-						</div>
-					</div>
+					<div align="left "id="mapholder"></div>
 					
 				</div>
 			</div>
