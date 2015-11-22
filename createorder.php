@@ -112,12 +112,11 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 	$squery="SELECT * FROM orderdetails WHERE order_creator_id='$userid'";
 	echo $squery;
 	$sresult=mysqli_query($con, $squery);
-	$row = mysqli_fetch_array($sresult);
-	echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
-	/*while ($row = mysqli_fetch_array($sresult))
+	
+	while ($row = mysqli_fetch_array($sresult))
 	{
 		echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
-	}*/
+	}
 ?>
 							<!--/product-information-->
 						</div>
