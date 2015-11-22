@@ -12,7 +12,7 @@ if($_GET)
 	$creatorid=$_SESSION['userid'];
 	
 	$query="SELECT orderNumber FROM Orders WHERE status='cart'";
-	//echo $query;
+	echo $query;die();
 	$res=mysqli_query($con,$query);
 	if(mysqli_num_rows($res)>0)
 	{
