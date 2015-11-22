@@ -110,7 +110,7 @@ function showError(error) {
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 
 					</div>
@@ -118,8 +118,8 @@ function showError(error) {
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Create</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Discover</a></li>
+								<li><a href="CreateOrder.php"><i class="fa fa-user"></i> Create</a></li>
+								<li><a href="Discover.php"><i class="fa fa-star"></i> Discover</a></li>
 								<li><a href="checkout.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<?php
 if(!isset($_SESSION['username']))
@@ -169,9 +169,22 @@ else
 			
 			
 
-											echo '<p>'.$row['productCode'].'</p>';
-											echo '<h2>'.$row['productName'].'</h2>';
-											echo '<p>'.$row['priceEach'].'</p>';
+										echo '<div class="product-information">
++								<h2>'.$row['productCode'].'</h2>
++								<p>Item Name: '.$row['productName'].'</p>
++								<span>
++									<span>US $'.$row['priceEach'].'</span>
++									<label>Quantity:</label>
++									<input type="text" value="1"  readonly="readonly"/>
++									<button type="button" class="btn btn-fefault cart">
++										
++										<i class="fa fa-shopping-cart"></i>
++										Select </a>
++									</button>
++								</span>
++								<p><b>Status:</b> Pending</p>
++								
++							</div>';
 											}?>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
 										</div>
