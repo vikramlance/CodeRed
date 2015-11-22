@@ -101,9 +101,8 @@ else
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html" class="active"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="checkout.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.php"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -122,7 +121,7 @@ else
 			
 
 			<div class="register-req">
-				<p>Text fields populated based </p>
+				<p>Text fields populated based information on our records</p>
 			</div><!--/register-req-->
 
 			<div class="shopper-informations">
@@ -131,28 +130,20 @@ else
 						<div class="shopper-info">
 							<p>Shopper Information</p>
 							<form>
-								<input type="text" placeholder="Display Name">
-								<input type="text" placeholder="User Name">
-								<input type="password" placeholder="Password">
-								<input type="password" placeholder="Confirm password">
-							</form>
-							<a class="btn btn-primary" href="">Get Quotes</a>
 							<a class="btn btn-primary" href="">Continue</a>
 						</div>
 					</div>
 					<div class="col-sm-5 clearfix">
 						<div class="bill-to">
-							<p>Bill To</p>
+							<p>Shipping address</p>
 							<div class="form-one">
 								<form>
 									<input type="text" placeholder="Company Name">
-									<input type="text" placeholder="Email*">
+									<input type="text" placeholder="Email">
 									<input type="text" placeholder="Title">
-									<input type="text" placeholder="First Name *">
-									<input type="text" placeholder="Middle Name">
-									<input type="text" placeholder="Last Name *">
-									<input type="text" placeholder="Address 1 *">
-									<input type="text" placeholder="Address 2">
+									<input type="text" placeholder="First Name">
+									<input type="text" placeholder="Last Name">
+									<input type="text" placeholder="Address">
 								</form>
 							</div>
 							<div class="form-two">
@@ -165,7 +156,7 @@ else
 										<option>UK</option>
 										<option>India</option>
 										<option>Pakistan</option>
-										<option>Ucrane</option>
+										<option>Ukraine</option>
 										<option>Canada</option>
 										<option>Dubai</option>
 									</select>
@@ -176,7 +167,7 @@ else
 										<option>UK</option>
 										<option>India</option>
 										<option>Pakistan</option>
-										<option>Ucrane</option>
+										<option>Ukraine</option>
 										<option>Canada</option>
 										<option>Dubai</option>
 									</select>
@@ -215,9 +206,6 @@ else
 					</thead>
 					<tbody>
 						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
-							</td>
 							<td class="cart_description">
 								<h4><a href="">Colorblock Scuba</a></h4>
 								<p>Web ID: 1089772</p>
@@ -241,9 +229,6 @@ else
 						</tr>
 
 						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/two.png" alt=""></a>
-							</td>
 							<td class="cart_description">
 								<h4><a href="">Colorblock Scuba</a></h4>
 								<p>Web ID: 1089772</p>
@@ -266,9 +251,6 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/three.png" alt=""></a>
-							</td>
 							<td class="cart_description">
 								<h4><a href="">Colorblock Scuba</a></h4>
 								<p>Web ID: 1089772</p>
@@ -353,8 +335,7 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Aditya Purandare</p>
 							</div>
 						</div>
 						
@@ -368,8 +349,7 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Arpit Saxena</p>
 							</div>
 						</div>
 						
@@ -383,8 +363,7 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Swapnil Phulse</p>
 							</div>
 						</div>
 						
@@ -398,15 +377,14 @@ else
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Vikramsinh Jadhav</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<p>Mays Business School, Texas A&M University</p>
 						</div>
 					</div>
 				</div>
@@ -487,8 +465,6 @@ else
 		
 	</footer><!--/Footer-->
 	
-
-
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
