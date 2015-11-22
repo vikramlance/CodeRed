@@ -131,6 +131,9 @@ function showError(error) {
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<?php
+											ob_start();
+session_start();
+require('connect.php');
 						$userid=$_SESSION['userid'];
 			$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
 			echo $squery;die()
