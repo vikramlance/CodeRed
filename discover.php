@@ -109,7 +109,7 @@ function showError(error) {
 							</ul>
 						</div>
 					</div>
-					<div align="left "id="mapholder"></div>
+					<div align="right "id="mapholder"></div>
 					
 				</div>
 			</div>
