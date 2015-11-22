@@ -142,14 +142,14 @@ function showError(error) {
 
 		while ($row = mysqli_fetch_array($sresult))
 			{
-			echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
-			}
+			
+			
 			
 
 											echo '<h2>'.$row['productCode'].'</h2>';
 											echo '<p>'.$row['productName'].'</p>';
 											echo '<p>'.$row['priceEach'].'</p>';
-											?>
+											}?>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
 										</div>
 								</div>
