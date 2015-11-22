@@ -103,6 +103,15 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 							</div>';
 }
 ?>
+<?php
+	$userid=$_SESSION['userid'];
+	$squery="SEARCH * FROM orderdetails WHERE customerNumber='$userid'";
+	$sresult=mysqli_query($con, $squery);
+	while ($row = mysqli_fetch_array($sresult))
+	{
+		echo $row[0].'<br/>'.$row[1].'<br/>'.$row[2].'<br/>'.$row[3];
+	}
+?>
 							<!--/product-information-->
 						</div>
 					</div><!--/product-details-->
