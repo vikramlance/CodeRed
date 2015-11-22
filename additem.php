@@ -19,9 +19,9 @@ if($_GET)
 		$row=mysqli_fetch_array($res);
 		$ordernum=$row['orderNumber'];
 	}
-	echo $pid.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty;
+	echo $pcode.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty;
 	
-	if(isset($pid)&&isset($name)&&isset($price)&&isset($qty))
+	if(isset($pcode)&&isset($name)&&isset($price)&&isset($qty))
 	{
 		if($ordernum)
 		{
