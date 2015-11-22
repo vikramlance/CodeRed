@@ -26,8 +26,8 @@ if($_GET)
 		$row=mysqli_fetch_array($res1);
 		$ordernum=$row[0];
 	}
-	echo $pcode.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty.'<br/>'.$ordernum;
-	die();
+	//echo $pcode.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty.'<br/>'.$ordernum;
+	//die();
 
 	if(isset($pcode)&&isset($name)&&isset($price)&&isset($qty))
 	{
