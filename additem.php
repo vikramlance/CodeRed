@@ -12,7 +12,7 @@ if($_GET)
 	$creatorid=$_SESSION['userid'];
 	
 	$query="SELECT orderNumber FROM Orders WHERE status='cart'";
-	echo $query;
+	//echo $query;
 	$res=mysqli_query($con,$query);
 	if(mysqli_num_rows($res)>0)
 	{
@@ -31,8 +31,8 @@ if($_GET)
 			{
 		$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode','','$qty','$creatorid', '$price', '$name')";
 		}
-		echo $q;die();
-		//mysqli_query($con, $q);
+		//echo $q;die();
+		mysqli_query($con, $q);
 		echo "Item added successfully";
 		header('location:createorder.php');
 	}
