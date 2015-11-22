@@ -25,11 +25,11 @@ if($_GET)
 	{
 		if($ordernum)
 		{
-			$q="INSERT INTO (productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode', '$ordernum','$qty','$creatorid', '$price', '$name')";
+			$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode', '$ordernum','$qty','$creatorid', '$price', '$name')";
 			}
 			else
 			{
-		$q="INSERT INTO (productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode','','$qty','$creatorid', '$price', '$name')";
+		$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode','','$qty','$creatorid', '$price', '$name')";
 		}
 		echo $q;die();
 		//mysqli_query($con, $q);
