@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+ob_start();
+session_start();
+?>
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +35,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@buymegroc.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +1 979 985 8821</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@shopit.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -50,25 +53,36 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/header_top-->
-		
+		</div>
+		<!--/header_top-->
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Create</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Discover</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> How it works</a></li>
-								
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="createorder.php"><i class="fa fa-user"></i> Create</a></li>
+								<li><a href="discover.php"><i class="fa fa-star"></i> Discover</a></li>
+								<li><a href="checkout.php"><i class="fa fa-crosshairs"></i> How it works</a></li>
+								<li>
+									<?php
+									if(!isset($_SESSION['username']))
+									{
+										echo '<a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a>';
+									}
+									else
+									{
+										echo '<a href="logout.php"><i class="fa fa-lock"></i> Logout</a>';
+									}
+										?>
+
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -237,7 +251,8 @@
 		</div>
 	</section>
 	
-	<footer id="footer"><!--Footer-->
+	
+<footer id="footer"><!--Footer-->
 
 		<div class="footer-widget">
 			<div class="container">
@@ -288,24 +303,24 @@
 							</form>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2015 E-SHOPPER Inc. All rights reserved.</p>
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
 				</div>
 			</div>
 		</div>
-		
-	</footer><!--/Footer-->
-	
 
-  
+	</footer><!--/Footer-->
+
+
+
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
