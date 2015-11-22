@@ -19,7 +19,7 @@ if($_GET)
 		$row=mysqli_fetch_array($res);
 		$ordernum=$row['orderNumber'];
 	}
-	echo $ordernum;
+	echo $pid.'<br/>'.$name.'<br/>'.$price.'<br/>'.$qty;
 	
 	if(isset($pid)&&isset($name)&&isset($price)&&isset($qty))
 	{
