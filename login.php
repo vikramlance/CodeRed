@@ -26,7 +26,7 @@ else
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -66,48 +66,44 @@ else
 		<center>
 		<h1> LOGIN PANEL </h1>
 		<?php
-		
-		if($_POST)
-		{
-			echo $_POST['username'].$_POST['password'];die();
-		}
-		
-		if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['submit']))
-		{
-			$username=mysqli_real_escape_string($con, $_POST['username']);
-			$password=mysqli_real_escape_string($con, $_POST['password']);
 
-			if(!empty($username)&&!empty($password))
+if(isset($_POST['username'])&&isset($_POST['password']))
+{
+	$username=mysqli_real_escape_string($con, $_POST['username']);
+	$password=mysqli_real_escape_string($con, $_POST['password']);
+
+	if(!empty($username)&&!empty($password))
+	{
+		$str="SELECT userName, password, customerNumber FROM customers WHERE username='$username'";
+		echo $str;die();
+		$result = mysqli_query($con, $str);
+		if(mysqli_num_rows($result)==1)
+		{
+			$row=mysqli_fetch_array($result);
+			if($username===$row['username'])
 			{
-				$str="SELECT username, password, customerNumber FROM customers WHERE username='$username'";
-				$result = mysqli_query($con, $str);
-				if(mysqli_num_rows($result)==1)
+				if($password===$row['password'])
 				{
-					$row=mysqli_fetch_array($result);
-					if($username===$row['username'])
-					{
-						if($password===$row['password'])
-						{
-							$_SESSION['username']=$row['username'];
-							$_SESSION['userid']=$row['customerNumber'];
-							echo 'Logged In';
-							header('location:index.php');
-						}
-						else
-						{
-							echo 'Incorrect Password';
-						}
-					}
-					else
-					{
-						echo 'Incorrect Username';
-					}
+					$_SESSION['username']=$row['username'];
+					$_SESSION['userid']=$row['customerNumber'];
+					echo 'Logged In';
+					header('location:index.php');
+				}
+				else
+				{
+					echo 'Incorrect Password';
 				}
 			}
+			else
+			{
+				echo 'Incorrect Username';
+			}
 		}
+	}
+}
 ?>
 
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -126,7 +122,7 @@ else
 									<li><a href="">UK</a></li>
 								</ul>
 							</div>
-							
+
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
 									DOLLAR
@@ -153,7 +149,7 @@ else
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
@@ -172,18 +168,18 @@ else
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.php" class="active">Login</a></li> 
+										<li><a href="product-details.html">Product Details</a></li>
+										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="cart.html">Cart</a></li>
+										<li><a href="login.php" class="active">Login</a></li>
                                     </ul>
-                                </li> 
+                                </li>
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
 										<li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
-                                </li> 
+                                </li>
 								<li><a href="404.html">404</a></li>
 								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
@@ -198,7 +194,7 @@ else
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	
+
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
@@ -236,7 +232,7 @@ else
 				</div>
 			</div>
 		</div>
-	</section><!--/form-->	
+	</section><!--/form-->
 
 <footer id="footer"><!--Footer-->
 
