@@ -119,24 +119,11 @@ function showError(error) {
 			{
 			
 			
-			echo '<div class="product-information">
-								<h2>'.$row['productCode'].'</h2>
-								<p>Item Name: '.$row['productName'].'</p>
-								<span>
-									<span>US $'.$row['priceEach'].'</span>
-									<label>Quantity:</label>
-									<input type="text" value="1"  readonly="readonly"/>
-									<button type="button" class="btn btn-fefault cart">
-										
-										<i class="fa fa-shopping-cart"></i>
-										Select </a>
-									</button>
-								</span>
-								<p><b>Status:</b> Pending</p>
-								
-							</div>';
+			
 
-											
+											echo '<p>'.$row['productCode'].'</p>';
+											echo '<h2>'.$row['productName'].'</h2>';
+											echo '<p>'.$row['priceEach'].'</p>';
 											}?>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
 										</div>
@@ -156,6 +143,6 @@ function showError(error) {
 
 
 	
-	<?php include('footer.php'); ?>
+<?php include('footer.php'); ?>
 </body>
 </html>
