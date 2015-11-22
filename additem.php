@@ -11,12 +11,14 @@ if($_GET)
 	$creatorid=$_SESSION['userid'];
 	
 	$query="SELECT orderNumber FROM Orders WHERE status='cart'";
+	echo $query;
 	$res=mysqli_query($con,$query);
 	if(mysqli_num_rows($res)>0)
 	{
 		$row=mysqli_fetch_array($res);
 		$ordernum=$row['orderNumber'];
 	}
+	echo $ordernum;
 	
 	if(isset($pid)&&isset($name)&&isset($price)&&isset($qty))
 	{
