@@ -36,7 +36,7 @@ window.onload = function() {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
           document.getElementById('startLon').innerHTML = startPos.coords.longitude;
- };
+ }};
  
  
        </script>
