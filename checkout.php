@@ -137,17 +137,15 @@ else
 						<div class="bill-to">
 							<p>Shipping address</p>
 							<div class="form-one">
-								<form>
+								<form action="checkout.php" method="post">
 									<input type="text" placeholder="Company Name">
 									<input type="text" placeholder="Email">
 									<input type="text" placeholder="Title">
 									<input type="text" placeholder="First Name">
 									<input type="text" placeholder="Last Name">
 									<input type="text" placeholder="Address">
-								</form>
 							</div>
 							<div class="form-two">
-								<form>
 									<input type="text" placeholder="Zip / Postal Code *">
 									<select>
 										<option>-- Country --</option>
@@ -175,7 +173,6 @@ else
 									<input type="text" placeholder="Phone *">
 									<input type="text" placeholder="Mobile Phone">
 									<input type="text" placeholder="Fax">
-								</form>
 							</div>
 						</div>
 					</div>
@@ -296,19 +293,9 @@ else
 							</td>
 						</tr>
 					</tbody>
+					</form>
 				</table>
 			</div>
-			<div class="payment-options">
-					<span>
-						<label><input type="checkbox"> Direct Bank Transfer</label>
-					</span>
-					<span>
-						<label><input type="checkbox"> Check Payment</label>
-					</span>
-					<span>
-						<label><input type="checkbox"> Paypal</label>
-					</span>
-				</div>
 		</div>
 	</section> <!--/#cart_items-->
 
