@@ -114,7 +114,7 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 	$sresult=mysqli_query($con, $squery);
 	while ($row = mysqli_fetch_array($sresult))
 	{
-		echo $row[0].'<br/>'.$row[1].'<br/>'.$row[2].'<br/>'.$row[3];
+		echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
 	}
 ?>
 							<!--/product-information-->
