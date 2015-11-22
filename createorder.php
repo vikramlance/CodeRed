@@ -191,7 +191,7 @@ $sresult=mysqli_query($con, $squery);
 
 while ($row = mysqli_fetch_array($sresult))
 {
-	echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
+	//echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
 }
 ?>
 							<!--/product-information-->
