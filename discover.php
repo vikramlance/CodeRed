@@ -140,10 +140,11 @@ function showError(error) {
 			{
 			echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
 			}
-?>
-											<h2>$row['productCode']</h2>
-											<p>$row['productName']</p>
-											<p>$row['priceEach']</p>
+
+											echo '<h2>'.$row['productCode'].'</h2>';
+											echo '<p>'.$row['productName'].'</p>';
+											echo '<p>'.$row['priceEach'].'</p>';
+											?>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Click for details</a>
 										</div>
 								</div>
