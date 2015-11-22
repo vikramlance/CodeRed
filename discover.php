@@ -37,7 +37,7 @@ function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
 
     var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=400x300&sensor=false";
+    +latlon+"&zoom=14&size=200x100&sensor=false";
     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 
@@ -109,16 +109,19 @@ function showError(error) {
 							</ul>
 						</div>
 					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<div id="mapholder"></div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	<div id="mapholder"></div>
-	
 
 	<section>
 		<div class="container">
 			<div class="row">
-				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Pending tasks</h2>
