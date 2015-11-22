@@ -4,10 +4,10 @@ require('connect.php');
 
 if($_GET)
 {
-	$pcode=$_GET['pid'];
-	$name=$_GET['name'];
-	$price=$_GET['price'];
-	$qty=$_GET['quantity']);
+	$pcode=mysqli_real_escape_string($con, $_GET['pid']);
+	$name=mysqli_real_escape_string($con,$_GET['name']);
+	$price=mysqli_real_escape_string($con,$_GET['price']);
+	$qty=mysqli_real_escape_string($con,$_GET['quantity']);
 	$creatorid=$_SESSION['userid'];
 	
 	$query="SELECT orderNumber FROM Orders WHERE status='cart'";

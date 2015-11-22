@@ -83,7 +83,7 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 	$itemprice = $itemlist[$i]['salePrice'];
 	$category=$itemlist[$i]['categoryPath'];
 
-//orderno, productcode, name, price, qunatity 
+	//orderno, productcode, name, price, qunatity
 	echo '<div class="product-information">
 								<h2>'.$itemname.'</h2>
 								<p>Item ID: '.$itemid.'</p>
