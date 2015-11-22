@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -22,6 +23,23 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<script>
+window.onload = function() {
+           if (navigator.geolocation) {
+   console.log('Geolocation is supported!');
+ }
+ else {
+  console.log('Geolocation is not supported for this Browser/OS version yet.');
+}
+      var startPos;
+       var geoSuccess = function(position) {
+        startPos = position;
+        document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+          document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+ };
+ 
+ 
+       </script>
 </head><!--/head-->
 
 <body>
