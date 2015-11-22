@@ -12,6 +12,7 @@ else
 {
 	if(isset($_POST['email'])&&isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['fname'])&&isset($_POST['lname'])&&isset($_POST['phone'])&&isset($_POST['address']) &&isset($_POST['city'])&&isset($_POST['state'])&&isset($_POST['zip'])&&isset($_POST['country']))
 	{
+		echo 'hi i am here';
 		$email=mysqli_real_escape_string($con, $_POST['email']);
 		$username=mysqli_real_escape_string($con, $_POST['username']);
 		$password=mysqli_real_escape_string($con, $_POST['password']);
@@ -27,7 +28,8 @@ else
 		if(!empty($fname)&&!empty($lname)&&!empty($email)&&!empty($username)&&!empty($password)&&!empty($phone)&&!empty($address)&&!empty($city)&&!empty($state)&&!empty($zip)&&!empty($country))
 		{
 			$q="INSERT INTO customers(customerNumber, customerLastName, customerFirstName, phone, addressLine1, city,state1,postalCode, country, username, password, emailid) VALUES ('4', '$lname','$fname','$phone,'$address','$city','$state', '$zip','$country', '$username','$password', '$email')";
-			mysqli_query($con, $q);
+			echo $q;die();
+			//mysqli_query($con, $q);
 			echo '<br/>Registration Complete!!';
 			header('location:login.php');
 		}
