@@ -34,7 +34,7 @@ if($_GET)
 
 		$q="INSERT INTO orderdetails(productCode, orderNumber, quantityOrdered, order_creator_id, priceEach, productName) VALUES ('$pcode', '$ordernum','$qty','$creatorid', '$price', '$name')";
 
-		echo $q;die();
+		//echo $q;die();
 		mysqli_query($con, $q);
 		echo "Item added successfully";
 		header('location:createorder.php');
