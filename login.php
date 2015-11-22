@@ -75,17 +75,19 @@ if(isset($_POST['username'])&&isset($_POST['password']))
 	if(!empty($username)&&!empty($password))
 	{
 		$str="SELECT userName, password, customerNumber FROM customers WHERE username='$username'";
-		echo $str;die();
 		$result = mysqli_query($con, $str);
 		if(mysqli_num_rows($result)==1)
 		{
 			$row=mysqli_fetch_array($result);
-			if($username===$row['username'])
+			echo $row['userName'].'haskdhksabd<br/>'.$row['customerNumber'];
+			if($username===$row['userName'])
 			{
+			echo $row['userName'].'312123213123<br/>'.$row['customerNumber'];
 				if($password===$row['password'])
 				{
-					$_SESSION['username']=$row['username'];
+					$_SESSION['username']=$row['userName'];
 					$_SESSION['userid']=$row['customerNumber'];
+					echo $row['userName'].'<br/>'.$row['customerNumber'];
 					echo 'Logged In';
 					header('location:index.php');
 				}
