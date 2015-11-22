@@ -27,7 +27,7 @@ else
 
 		if(!empty($fname)&&!empty($lname)&&!empty($email)&&!empty($username)&&!empty($password)&&!empty($phone)&&!empty($address)&&!empty($city)&&!empty($state)&&!empty($zip)&&!empty($country))
 		{
-			$q="INSERT INTO customers(customerNumber, customerLastName, customerFirstName, phone, addressLine1, city,state1,postalCode, country, username, password, emailid) VALUES ('4', '$lname','$fname','$phone,'$address','$city','$state', '$zip','$country', '$username','$password', '$email')";
+			$q="INSERT INTO customers(customerNumber, customerLastName, customerFirstName, phone, addressLine1, city,state1,postalCode, country, username, password, email_id) VALUES ('4', '$lname','$fname','$phone','$address','$city','$state', '$zip','$country', '$username','$password', '$email')";
 			echo $q;die();
 			//mysqli_query($con, $q);
 			echo '<br/>Registration Complete!!';
