@@ -33,15 +33,15 @@ else
 
 								<li>
 									<?php
-									if(!isset($_SESSION['username']))
-									{
-										echo '<a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a>';
-									}
-									else
-									{
-										echo '<a href="logout.php"><i class="fa fa-lock"></i> Logout</a>';
-									}
-										?>
+if(!isset($_SESSION['username']))
+{
+	echo '<a href="login.php"><i class="fa fa-lock"></i> Login/Signup</a>';
+}
+else
+{
+	echo '<a href="logout.php"><i class="fa fa-lock"></i> Logout</a>';
+}
+?>
 								</li>
 							</ul>
 						</div>
@@ -91,9 +91,11 @@ if(isset($_POST['search_query']) && !empty($_POST['search_query']))
 ?>
 <p>
 								<form action="createorder.php" method="POST">
-									<input type="text" name="search_query" id="search_query" class="search_box" <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
+								<div class="search_box pull-right">
+																	<input type="text" name="search_query" id="search_query" class="search_box" <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
 									<input type="submit" name="Submit" value="Submit" />
 									<br/>
+									</div>
 								</form>
 </p>
 
@@ -128,15 +130,15 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 }
 ?>
 <?php
-	$userid=$_SESSION['userid'];
-	$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
-	//echo $squery;
-	$sresult=mysqli_query($con, $squery);
-	
-	while ($row = mysqli_fetch_array($sresult))
-	{
-		echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
-	}
+$userid=$_SESSION['userid'];
+$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
+//echo $squery;
+$sresult=mysqli_query($con, $squery);
+
+while ($row = mysqli_fetch_array($sresult))
+{
+	echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
+}
 ?>
 							<!--/product-information-->
 						</div>
