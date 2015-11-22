@@ -62,7 +62,7 @@ function showError(error) {
 </head><!--/head-->
 
 <body>
-<div id="mapholder"></div>
+
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -105,7 +105,6 @@ function showError(error) {
 								<li><a href="#"><i class="fa fa-user"></i> Create</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Discover</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> How it works</a></li>
-								
 								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -113,7 +112,7 @@ function showError(error) {
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+	<div id="mapholder"></div>
 	
 
 	<section>
