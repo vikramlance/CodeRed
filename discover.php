@@ -144,7 +144,7 @@ function showError(error) {
 			{
 			echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
 			}
-			die();
+			
 
 											echo '<h2>'.$row['productCode'].'</h2>';
 											echo '<p>'.$row['productName'].'</p>';
