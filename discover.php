@@ -137,13 +137,14 @@ function showError(error) {
 											<?php
 						$userid=$_SESSION['userid'];
 			$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
-			echo $squery;die();
+			echo $squery;
 			$sresult=mysqli_query($con, $squery);
 
 		while ($row = mysqli_fetch_array($sresult))
 			{
 			echo $row['productCode'].'<br/>'.$row['productName'].'<br/>'.$row['priceEach'];
 			}
+			die();
 
 											echo '<h2>'.$row['productCode'].'</h2>';
 											echo '<p>'.$row['productName'].'</p>';
