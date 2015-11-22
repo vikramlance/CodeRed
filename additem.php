@@ -36,8 +36,8 @@ if($_GET)
 
 		//echo $q;die();
 		mysqli_query($con, $q);
-		echo "Item added successfully";
-		header('location:createorder.php');
+		echo "<h1>Item added successfully</h1>";
+		header('location:5;createorder.php');
 	}
 }
 
