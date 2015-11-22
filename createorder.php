@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<?php require('header.php'); ?>
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -17,7 +17,7 @@
 								<li><a href="#"><i class="fa fa-user"></i> Create</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Discover</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> How it works</a></li>
-								
+
 								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -25,60 +25,99 @@
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
 
-	
+
+
 	<section>
 		<div class="container">
-			<div class="row">
+			<div class="row" style="margin:auto">
 
 							<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
-						<div class="col-sm-5">
-							<div class="view-product">
-								<h3>ZOOM</h3>
-							</div>
-						</div>
-						<div class="col-sm-7">
-							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
-								<img src="images/product-details/rating.png" alt="" />
+						<div class="col-sm-12">
+
+													<!--/product-information-->
+							<div class="product-search">
+							<?php
+
+
+if(isset($_POST['search_query']) && !empty($_POST['search_query']))
+{
+	$apiKey = "pf9r2nkqfbhsd2a72xnyp9v2";
+	$userAgent = $_SERVER['HTTP_USER_AGENT'];
+	$search = $_POST['search_query'];
+	$searchquery='http://api.walmartlabs.com/v1/search?query='.$search.'&format=json&apiKey='.$apiKey;
+
+	// Get cURL resource
+	$curl = curl_init();
+	// Set some options - we are passing in a useragent too here
+	curl_setopt_array($curl, array(
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_URL => $searchquery,
+			CURLOPT_USERAGENT => $userAgent
+		));
+	// Send the request & save response to $resp
+	$resp = curl_exec($curl);
+	// Close request to clear up some resources
+	curl_close($curl);
+
+	$array = json_decode($resp, true);
+
+}
+?>
+<p>
+								<form action="createorder.php" method="POST">
+									<input type="text" name="search_query" id="search_query"  <?php if($_POST){ echo 'value='.trim($array['query']);} else {echo 'placeholder="Search"';} ?> />
+									<input type="submit" name="Submit" value="Submit" />
+									<br/>
+								</form>
+</p>
+
+							<?php
+$itemlist = $array['items'];
+for ($i=0; $i < sizeof($array['items']) ; ++$i) {
+	//echo $itemlist[$i]['itemId'];
+
+	echo '<div class="product-information">
+								<h2>'.$itemlist[$i]['name'].'</h2>
+								<p>Item ID: '.$itemlist[$i]['itemId'].'</p>
+								<img src="'.$itemlist[$i]['thumbnailImage'].'" alt="" />
 								<span>
-									<span>US $59</span>
+									<span>US $'.$itemlist[$i]['salePrice'].'</span>
 									<label>Quantity:</label>
-									<input type="text" value="3" />
+									<input type="text" value="1" />
 									<button type="button" class="btn btn-fefault cart">
+										<a href="additem.php"
 										<i class="fa fa-shopping-cart"></i>
-										Add to cart
+										Select Item</a>
 									</button>
 								</span>
 								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
-								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-							</div><!--/product-information-->
+								<p><b>Category:</b>'.$itemlist[$i]['categoryPath'].'</p>
+							</div>';
+}
+?>
+							<!--/product-information-->
 						</div>
 					</div><!--/product-details-->
 
-			
+
 			</div>
 		</div>
 	</section>
-	
+
 
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-sm-9 padding-right">
-					
-					
+
+
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
 	<footer id="footer"><!--Footer-->
 
 		<div class="footer-widget">
@@ -130,11 +169,11 @@
 							</form>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
@@ -143,11 +182,11 @@
 				</div>
 			</div>
 		</div>
-		
-	</footer><!--/Footer-->
-	
 
-  
+	</footer><!--/Footer-->
+
+
+
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
