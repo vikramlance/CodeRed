@@ -63,8 +63,7 @@ else
 		</div>
 		<!--/header_top-->
 
-		<center>
-		<h1> LOGIN PANEL </h1>
+		
 		<?php
 
 if(isset($_POST['username'])&&isset($_POST['password']))
@@ -187,6 +186,8 @@ if(isset($_POST['username'])&&isset($_POST['password']))
 							</ul>
 						</div>
 					</div>
+					<center>
+					<h1> LOGIN PANEL </h1>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
 							<input type="text" placeholder="Search"/>

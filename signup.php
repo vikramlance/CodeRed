@@ -3,6 +3,7 @@ ob_start();
 session_start();
 
 require('connect.php');
+
 if(isset($_SESSION['username']))
 {
 	header('location:index.php');
@@ -25,7 +26,7 @@ else
 
 		if(!empty($fname)&&!empty($lname)&&!empty($email)&&!empty($username)&&!empty($password)&&!empty($phone)&&!empty($address)&&!empty($city)&&!empty($state)&&!empty($zip)&&!empty($country))
 		{
-			$q="INSERT INTO customers(customerNumber, customerLastName, customerFirstName, phone, addressLine1, city,state1,postalCode, country, username, password, emailid) VALUES ('', '$lname','$fname','$phone,'$address','$city','$state', '$zip','$country', '$username','$password', '$email')";
+			$q="INSERT INTO customers(customerNumber, customerLastName, customerFirstName, phone, addressLine1, city,state1,postalCode, country, username, password, emailid) VALUES ('4', '$lname','$fname','$phone,'$address','$city','$state', '$zip','$country', '$username','$password', '$email')";
 			mysqli_query($con, $q);
 			echo '<br/>Registration Complete!!';
 			header('location:login.php');
