@@ -1,10 +1,10 @@
 <?php
 ob_start();
 session_start();
+require('connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<?php require('header.php'); ?>
 
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
