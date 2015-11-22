@@ -12,7 +12,7 @@ if($_GET)
 	$creatorid=$_SESSION['userid'];
 
 	$query="SELECT orderNumber FROM Orders WHERE status='cart' AND order_creator_id='$creatorid'";
-	echo $query;die();
+	//echo $query;die();
 	$res=mysqli_query($con,$query);
 	if(mysqli_num_rows($res)>0)
 	{
@@ -22,7 +22,7 @@ if($_GET)
 	else
 	{
 		$query1="SELECT max(orderNumber) FROM Orders";
-		$res1=mysqli_query($con,$query);
+		$res1=mysqli_query($con,$query1);
 		$row=mysqli_fetch_array($res1);
 		$ordernum=$row[0];
 	}
