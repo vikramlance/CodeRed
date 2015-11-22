@@ -109,6 +109,9 @@ function showError(error) {
 							</ul>
 						</div>
 					</div>
+					<ul align="right" class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					</ul>		
 					<div align="right "id="mapholder"></div>
 					
 				</div>
