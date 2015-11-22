@@ -109,7 +109,7 @@ for ($i=0; $i < sizeof($array['items']) ; ++$i) {
 ?>
 <?php
 	$userid=$_SESSION['userid'];
-	$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed'";
+	$squery="SELECT * FROM orderdetails, orders WHERE orderdetails.order_creator_id='$userid' AND orders.status <> 'completed' AND orderdetails.orderNumber = orders.orderNumber";
 	echo $squery;
 	$sresult=mysqli_query($con, $squery);
 	
